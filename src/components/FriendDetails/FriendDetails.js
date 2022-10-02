@@ -1,10 +1,14 @@
 import React from "react";
+import { useLoaderData } from "react-router-dom";
 
 const FriendDetails = () => {
+  const friend = useLoaderData();
+  console.log(friend);
   return (
     <div>
-      <h1>Friends Details page</h1>
-      <h2>hi ami friendsDetails boltyci</h2>
+      <h1>Details About {friend.name} </h1>
+      <p>phone:{friend.phone} </p>
+      <p>website: {friend.website} </p>
     </div>
   );
 };
